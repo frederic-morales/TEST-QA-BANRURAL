@@ -11,25 +11,25 @@ Al momento de enviar el formulario con el botón no se muestra el mensaje de que
 
 Al momento de ingresar un numero que no sea un numero entero no se muestra ninguna alerta al usuario y además se incrementa el número de intentos del usuario, condicion al inicio de la funcion para verificar si se esta ingresando un número entero:
 
-*if (!Number.isInteger(parseFloat(userGuess))) {
-*guesses.textContent = "Debe ingresar un número entero"
-_return
-_}
+- if (!Number.isInteger(parseFloat(userGuess))) {
+- guesses.textContent = "Debe ingresar un número entero"
+- return
+- }
 
 ## Error No4
 
 Al momento de ingresar el ultimo intento, se muestra que el usuario ganó y que adivino el número y esto es incorrecto ya que este mensaje se esta mostrando cuando el usuario utilice su ultimo intento y solo se debería de mostrar cuando el usuario adivine el numero, el error esta en los condicionales if, condiciones cambiadas:
 
-*if (guessCount === ATTEMPS) {
-*lastResult.textContent = '!!!Pérdistes!!!';
-*lastResult.style.backgroundColor = 'black';
-*lowOrHi.textContent = '';
-_setGameOver();
-_} else if (userGuess == randomNumber) {
-*lastResult.textContent = 'Felicitaciones! adivinaste el número!';
-*lastResult.style.backgroundColor = 'red';
-_setGameOver();
-_}.
+- if (guessCount === ATTEMPS) {
+- lastResult.textContent = '!!!Pérdistes!!!';
+- lastResult.style.backgroundColor = 'black';
+- lowOrHi.textContent = '';
+- setGameOver();
+- } else if (userGuess == randomNumber) {
+- lastResult.textContent = 'Felicitaciones! adivinaste el número!';
+- lastResult.style.backgroundColor = 'red';
+- setGameOver();
+- }.
 
 ## Error No5
 
