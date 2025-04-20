@@ -46,9 +46,9 @@
 </body>
 
 <script>
-  let randomNumber = Math.random() * 10;
+  let randomNumber = Math.floor(Math.random() * 10);
 
-  const ATTEMPS = 5;
+  const ATTEMPS = 10;
   const guesses = document.querySelector('.guesses');
   const validNumber = document.querySelector('.validNumber');
   const lastResult = document.querySelector('.lastResult');
@@ -74,12 +74,12 @@
     }
     guesses.textContent += userGuess + ' ';
 
-    if (userGuess === randomNumber) {
+    if (guessCount === ATTEMPS) {
       lastResult.textContent = '!!!Pérdistes!!!';
       lastResult.style.backgroundColor = 'black';
       lowOrHi.textContent = '';
       setGameOver();
-    } else if (guessCount === ATTEMPS) {
+    } else if (userGuess == randomNumber) {
       lastResult.textContent = 'Felicitaciones! adivinaste el número!';
       lastResult.style.backgroundColor = 'red';
       setGameOver();
@@ -93,6 +93,7 @@
       }
     }
 
+    console.log(userGuess);
     console.log(randomNumber);
     guessCount++;
     guessField.value = '';
@@ -108,7 +109,7 @@
     resetButton = document.createElement('button');
     resetButton.textContent = 'Comienza un nuevo juego';
     document.body.appendChild(resetButton);
-    resetButton.addeventListener('click', resetGame);
+    resetButton.addEventListener('click', resetGame);
   }
 
   function resetGame() {
