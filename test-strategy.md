@@ -18,7 +18,8 @@ Al momento de ingresar un numero que no sea un numero entero no se muestra ningu
 
 ## Error No4
 
-Al momento de ingresar el ultimo intento, se muestra que el usuario ganó y que adivino el número y esto es incorrecto ya que este mensaje se esta mostrando cuando el usuario utilice su ultimo intento y solo se debería de mostrar cuando el usuario adivine el numero, el error esta en los condicionales if, condiciones cambiadas:
+Al momento de ingresar el ultimo intento, se muestra que el usuario ganó y que adivino el número y esto es incorrecto ya que este mensaje se esta mostrando cuando el usuario utilice su ultimo intento y solo se debería de mostrar cuando el usuario adivine el numero, el error esta en los condicionales if.
+Condiciones cambiadas:
 
 - if (guessCount === ATTEMPS) {
 - lastResult.textContent = '!!!Pérdistes!!!';
@@ -42,3 +43,7 @@ Al momento de terminar el juego, ya sea que el usuario gané o pierda el se ejec
 ## Error No7
 
 Numero de intentos 5, los requerimientos indican que el usuario debe de tener 10 intentos, la solución sería cambiar la variable ATTEMSP = 10
+
+## Error No8
+
+Colores de alerta incorrectos, al momento del usuario ingresar un numero incorrecto ya sea mayor o menor el mensaje se mostraba con fondo verde lo cual es incorrecto ya que los requerimientos especifican que debe de ir color negro, lo mismo ocurre al ganar, se mostraba el mensaje de color rojo y debe ser de color verde, también al momento del usuario quedarse sin intentos, se mostraba el mensaje de color negro y debe ser de color rojo.

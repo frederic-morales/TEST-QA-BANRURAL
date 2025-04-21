@@ -76,16 +76,16 @@
 
     if (guessCount === ATTEMPS) {
       lastResult.textContent = '!!!Pérdistes!!!';
-      lastResult.style.backgroundColor = 'black';
+      lastResult.style.backgroundColor = 'red';
       lowOrHi.textContent = '';
       setGameOver();
     } else if (userGuess == randomNumber) {
       lastResult.textContent = 'Felicitaciones! adivinaste el número!';
-      lastResult.style.backgroundColor = 'red';
+      lastResult.style.backgroundColor = 'green';
       setGameOver();
     } else {
       lastResult.textContent = 'Incorrecto! ';
-      lastResult.style.backgroundColor = 'green';
+      lastResult.style.backgroundColor = 'black';
       if (userGuess < randomNumber) {
         lowOrHi.textContent = 'El número es mayor!';
       } else if (userGuess > randomNumber) {
